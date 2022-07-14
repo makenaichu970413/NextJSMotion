@@ -1,34 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## 🔥Fave Technical Assignment (PineLabs Cinema) <br /> <br />
 
-## Getting Started
+### 📖Introduction
+The assessment website are named as "PineLabs Cinema" and has been deployed into "Vercel" free hosting service with the <br />
+URL: (https://pinelabscinema.vercel.app/). Feel free to visit the website whenever you want🚀. <br /> <br />
 
-First, run the development server:
+### ⚙️Setup & Requirements
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+***1. Create the NextJS App***
+- Create the NextJS App by run command: ```npx create-next-app makenaichu-assessment```
+- After installtion completed, open the "makenaichu-assessment" folder by Visual Studio Code. 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+***2. Download Source Code from GitHub***
+- Download GitHub source code as "ZIP" file and extract it.
+- Copy the extracted files into "makenaichu-assessment" folder, and paste the extracted files by replace the existing files.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+***2. Install Node Version (16.13.1)***
+- Install the Node Version of "16.13.1" by run command: ```nvm install 16.13.1```
+- Use the installed Node Version of "16.13.1" by run command: ```nvm use 16.13.1```
+- Click "yes" when prompt window "Allow the app make changes to your device".
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+***3. Install Reuired Dependencies***
+- Install the dependencies package by run command: ```npm install```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+***4. Start NextJS Project***
+- Start the project in development mode by run command: ```npm run dev```
+- Open the started project by given URL, Eg: ```http://localhost:3000``` <br /> <br />
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+### 💻Assessment Additional Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+***1. Authentication***
+- User are allow to Signup and Login the account.
+- Kept user session and authenticated status whenever reload the page.
+- Automatically help user logout their acoount whenever session over the expire time.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+***2. Data Storing***
+- User are allow to save the favourite movie into their registered account.
 
-## Deploy on Vercel
+***3. Translation***
+-  User can switch their preferred language, Eg: English (Default), Malay and Mandarin.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+***4. SEO Friendly***
+- Every movie link in website will display the OpenGraph Image, Title, Overview whenever user share the link in social media.
+- All movie page are Static Site Generation (SSG) which allow Google SEO to be crawl the data in real time and return into Google search result.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+***5. Switch Website Theme***
+- User are allow to change the website background color into "Light" or "Dark" theme.
+
+***6. Search Function***
+-  User are allow to search the movie by input the keyword in search box.
+
+
+<br /> <br />That’s the end of the assessment setup and introduction, I hope you have fun!
+Wish you hav a nice day 🌻🌻🌻
