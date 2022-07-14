@@ -1,0 +1,244 @@
+// =======================
+// Global
+// =======================
+$purple: #280534;
+$yellow: #f8e112;
+
+@font-face {
+  // font-family: "Quicksand";
+  // src: url("/Quicksand-Light.woff2") format("woff2"),
+  //   url("/Quicksand-Light.woff") format("woff");
+}
+
+* {
+  font-family: "Edu VIC WA NT Beginner", cursive;
+  // font-weight: 300;
+  font-style: normal;
+  font-size: large;
+}
+
+body,
+ul,
+h1,
+h2,
+h3,
+p,
+button,
+a,
+div {
+  margin: 0;
+  padding: 0;
+  color: white;
+  // font-family: "Quicksand";
+  letter-spacing: 2px;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  background: rgb(100, 0, 123);
+  background: radial-gradient(
+    circle,
+    rgba(100, 0, 123, 1) 0%,
+    rgba(62, 20, 86, 1) 100%
+  );
+  overflow: hidden;
+}
+
+button {
+  color: white;
+  padding: 10px 30px;
+  font-size: 1em;
+  background: transparent;
+  border-radius: 50px;
+  border: 1px solid white;
+  margin: 40px auto 0;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.container {
+  max-width: 300px;
+  margin: 10px auto 40px;
+
+  h3 {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  li {
+    padding: 10px;
+    cursor: pointer;
+  }
+}
+
+// =======================
+// Header
+// =======================
+header {
+  display: flex;
+  padding: 40px;
+  align-items: center;
+
+  .title {
+    flex-grow: 1;
+    margin-left: 20px;
+    font-size: 0.6em;
+  }
+
+  h1 {
+    font-size: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 10px;
+  }
+
+  .logo {
+    cursor: pointer;
+
+    .pizza-svg {
+      width: 80px;
+      overflow: visible;
+      stroke: #fff;
+      stroke-width: 4;
+      stroke-linejoin: round;
+      stroke-linecap: round;
+    }
+  }
+}
+
+// =======================
+// List
+// =======================
+li {
+  span {
+    font-size: 25px;
+    text-transform: capitalize;
+
+    &.active {
+      font-weight: bold;
+
+      &::before {
+        content: ">";
+        position: relative;
+        top: -2px;
+        margin-right: 6px;
+        transform: scale(0.8, 1);
+        display: inline-block;
+      }
+    }
+  }
+}
+
+// =======================
+// Pages
+// =======================
+.home {
+  h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+
+  button {
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.6em;
+    border: 3px solid white;
+    margin: 30px 20px;
+  }
+}
+
+.home.container,
+.order.container {
+  text-align: center;
+  max-width: 650px;
+}
+
+.order {
+  h2 {
+    font-size: 35px;
+  }
+
+  p {
+    font-size: 25px;
+    margin: 40px auto 20px;
+
+    span {
+      font-size: 25px;
+      color: $yellow;
+      text-decoration: underline;
+    }
+  }
+
+  .list {
+    div {
+      color: $yellow;
+      font-size: 25px;
+      text-transform: capitalize;
+    }
+  }
+}
+
+// =======================
+// Modal
+// =======================
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.modal {
+  max-width: 400px;
+  margin: 200px auto 0;
+  padding: 40px 20px;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+
+  button {
+    color: #444;
+    border-color: #444;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: all 0.2s linear;
+
+    &:hover {
+      color: $purple;
+      border-color: $purple;
+      // text-shadow: 0px 0px 8px $purple;
+      box-shadow: 0px 0px 8px $purple;
+    }
+  }
+
+  p {
+    color: #444;
+    font-weight: bold;
+    font-size: 25px;
+  }
+}
+
+// =======================
+// Loader
+// =======================
+.loader {
+  width: 10px;
+  height: 10px;
+  margin: 40px auto;
+  border-radius: 50%;
+  background: #fff;
+}
+
+.loader-btn {
+  cursor: pointer;
+  text-decoration: underline;
+  transition: all 0.2s linear;
+
+  &:hover {
+    color: $yellow;
+  }
+}
