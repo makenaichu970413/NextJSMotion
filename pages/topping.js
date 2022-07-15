@@ -4,7 +4,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 // ####################################
 
 // ####################################
@@ -73,15 +73,22 @@ export default function Toppings(props) {
       <h3>Step 2: Choose Toppings</h3>
       <ul className="list">{list()}</ul>
 
-      {pizza.toppings.length > 0 && (
-        <motion.div variants={nextBtnVariants}>
-          <Link href="/order">
-            <motion.button variants={btnVariants} whileHover="hover">
-              Order
-            </motion.button>
-          </Link>
-        </motion.div>
-      )}
+      <AnimatePresence exitBeforeEnter>
+        {pizza.toppings.length > 0 && (
+          <motion.div
+            variants={nextBtnVariants}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+          >
+            <Link href="/order">
+              <motion.button variants={btnVariants} whileHover="hover">
+                Order
+              </motion.button>
+            </Link>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.div>
   );
 }

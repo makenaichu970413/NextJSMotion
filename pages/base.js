@@ -4,7 +4,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 // ####################################
 
 // ####################################
@@ -28,8 +28,9 @@ export default function Base(props) {
   const [{ pizza }, dispatch] = useStateValue();
   const bases = ["Classic", "Thin & Crispy", "Thick Crust"];
 
-  const addBase = (base) => {
-    dispatch({ type: "SET_PIZZA", pizza: { ...pizza, base } });
+  const addBase = (value) => {
+    let newBase = pizza.base != value ? value : "";
+    dispatch({ type: "SET_PIZZA", pizza: { ...pizza, base: newBase } });
   };
 
   return (
@@ -57,20 +58,23 @@ export default function Base(props) {
         })}
       </ul>
 
-      {pizza.base && (
-        <motion.div
-          className="next"
-          variants={nextBtnVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <Link href="/topping">
-            <motion.button variants={btnVariants} whileHover="hover">
-              Next
-            </motion.button>
-          </Link>
-        </motion.div>
-      )}
+      <AnimatePresence exitBeforeEnter>
+        {pizza.base && (
+          <motion.div
+            className="next"
+            variants={nextBtnVariants}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+          >
+            <Link href="/topping">
+              <motion.button variants={btnVariants} whileHover="hover">
+                Next
+              </motion.button>
+            </Link>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.div>
   );
 }
