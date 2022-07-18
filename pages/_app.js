@@ -3,8 +3,6 @@
 // ####################################
 import Head from "next/head";
 import { Fragment } from "react";
-import { StateProvider } from "../redux/StateProvider";
-import reducer, { initialState } from "../redux/Reducer";
 import { AnimatePresence } from "framer-motion";
 // ####################################
 
@@ -24,7 +22,8 @@ import Modal from "../components/Modal";
 // ####################################
 // REDUX
 // ####################################
-import { useStateValue } from "../redux/StateProvider";
+import { StateProvider } from "../redux/StateProvider";
+import reducer, { initialState } from "../redux/Reducer";
 // ####################################
 
 function MyApp({ Component, pageProps, router }) {
@@ -37,7 +36,7 @@ function MyApp({ Component, pageProps, router }) {
             name="description"
             content="Interact NextJS Web App with Framer Motion"
           />
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/logo.svg" />
         </Head>
 
         <Header />
