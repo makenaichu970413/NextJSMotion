@@ -39,13 +39,15 @@ function MyApp({ Component, pageProps, router }) {
           <link rel="icon" href="/logo.svg" />
         </Head>
 
-        <Header />
+        <main>
+          <Header />
 
-        <Modal />
+          <Modal />
 
-        <AnimatePresence exitBeforeEnter>
-          <Component {...pageProps} key={router.route} />
-        </AnimatePresence>
+          <AnimatePresence exitBeforeEnter>
+            <Component {...pageProps} key={router.route} />
+          </AnimatePresence>
+        </main>
       </Fragment>
     </StateProvider>
   );

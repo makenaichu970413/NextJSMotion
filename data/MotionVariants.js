@@ -9,9 +9,10 @@
 // *yoyo => Set the number of time of animation playing, or "Infinity"
 
 export const containerVariants = {
-  hidden: { x: "100vw" },
+  hidden: { x: "100vw", originX: 0 },
   visible: {
     x: 0,
+    originX: 0,
     transition: {
       type: "spring",
       mass: 0.4,
@@ -22,6 +23,7 @@ export const containerVariants = {
   },
   exit: {
     x: "-100vw",
+    originX: 0,
     transition: { ease: "easeInOut" },
   },
 };
